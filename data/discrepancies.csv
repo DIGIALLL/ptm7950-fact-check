@@ -1,0 +1,20 @@
+id,section,parameter,claim_a,source_a,claim_b,source_b,note
+D01,manufacturer,thermal_conductivity_W_mK,"6.0-8.5 (Honeywell series datasheet)",2,"8.5 (Solstice product page)",3,
+D02,manufacturer,thermal_impedance_C_cm2_W,"0.04-0.06 (Honeywell series datasheet)",2,"0.04-0.08; '<0.04' in description (Solstice)",3,
+D03,manufacturer,thickness_mm,"only 0.25, tolerance +/-0.075 (Honeywell)",1,"only 0.25 and 0.2 (CAPLINQ)",4,
+D04,manufacturer,HAST_hours,"96 h at 130C/85%RH (Reliability Report Rev C)",8,"not beyond 92 h (CAPLINQ)",4,
+D05,manufacturer,aging_tests,"1000 h 150C; 1000 cycles -55..+125C (Rev C, datasheet)","8;3","2000 h 150C; 2000 h 85C/85%; 1000 thermal shock -40..+200C (report on Scribd)",9,
+D06,manufacturer,pad_vs_paste,"PTM7950-SP has exactly the same properties as pad (CAPLINQ)",5,"density pad 2.8 g/cm3 vs paste SPS 2.5 g/cm3","3;6",
+D07,manufacturer,burn_in,"phase change at 45C (datasheet)",3,"30-40 psi and >=30 min at 60C for minimum BLT (CAPLINQ)",4,
+D08,methodology,impedance_method,"ASTM D5470 Modified, no shim; modification and pressure not disclosed",3,"impedance strongly pressure-dependent (CAPLINQ chart)",4,
+D09,methodology,reliability_method,"initial impedance by ASTM D5470",3,"post-reliability impedance by ASTM E1461 laser flash, which does not measure contact resistance","6;9;10",
+D10,methodology,pass_criteria,"'pass' claimed","3;8;9","acceptance criterion not stated in any document",,
+D11,independent,thermal_conductivity_W_mK,"8.5 claimed",3,"6.374 effective (Igor's Lab, ASTM D5470-17); 6.5 (forum user)","11;21",independent ~25% lower
+D12,independent,min_Rth_C_cm2_W,"0.04-0.08 claimed",3,"0.034 at 17 um BLT (Igor's Lab)",11,consistent
+D13,independent,phase_change_onset_C,"45 claimed",3,"thinning from ~40 (8.5 N) and ~35 (9 N); burn-in complete by 50","12;13;14",partly consistent
+D14,igorslab,thickness_rule,"only 0.25 mm, anything else not original",15,"own reference original measured 0.2 mm (printed 0.25)",16,within Honeywell tolerance [1]
+D15,igorslab,original_vs_copy,"reference PTM7950 as original",16,"LTT pad lower Rth than reference after burn-in","14;18",
+D16,igorslab,burn_in_temperature_C,"50 complete, plan for 52-53 (self-corrected)",13,"min 55-60 across pad, per unnamed OEM (EVGA forum quote)",22,
+D17,igorslab,Rth_linearity,"Rth linear with BLT",19,"slopes from own data give 6.49 / 7.07 / 4.99 W/mK (author calculation)",11,see README calculation
+D18,igorslab,conclusion_from_noise,"TG Phase Sheet 'actually the better material'",17,"difference 0.06-0.11 C, uncertainty not stated",17,
+D19,igorslab,durability_30000_cycles,"30000 cycles for PTM7950 (Nanotest data, forum comment)",20,"no published method or data; same comment states thickness '2.5 mm'",20,
